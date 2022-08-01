@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(218deg, 11%, 8%);
+  font-size: 14px;
+  font-family: "Overpass", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body .rating-state {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  width: 327px;
+  height: 360px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+body .rating-state .star-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 50%;
+}
+body .rating-state h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+body .rating-state p {
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+  line-height: 22px;
+}
+body .rating-state .ratings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+}
+body .rating-state .ratings input {
+  position: absolute;
+  left: -9000000%;
+}
+body .rating-state .ratings [data-type-rate] {
+  width: 42px;
+  height: 42px;
+  background-color: hsl(213deg, 19%, 18%);
+  border: none;
+  border-radius: 50%;
+  color: hsl(216deg, 12%, 54%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .rating-state .ratings [data-type-rate]:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+body .rating-state .ratings .active-rate {
+  background-color: hsl(216deg, 12%, 54%);
+  color: white;
+}
+body .rating-state .give-rate {
+  align-self: center;
+  width: 279px;
+  height: 45px;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  line-height: 18px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+}
+body .rating-state .give-rate:disabled {
+  opacity: 0.5;
+}
+body .rating-state .give-rate:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+body .thank-you-state {
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  width: 327px;
+  height: 360px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+body .thank-you-state .thank-you-icon {
+  width: 144px;
+  height: 96px;
+}
+body .thank-you-state .rate-val {
+  width: 168px;
+  height: 32px;
+  border-radius: 50px;
+  display: flex;
+  gap: 0.25em;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(213deg, 19%, 18%);
+  color: hsl(25deg, 97%, 53%);
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+body .thank-you-state h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+body .thank-you-state p {
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.visible {
+  display: flex !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media screen and (min-width: 450px) {
+  body .rating-state {
+    width: 412px;
+    height: 416px;
+  }
+  body .rating-state .star-icon {
+    width: 48px;
+    height: 48px;
+  }
+  body .rating-state h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  body .rating-state p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  body .rating-state .ratings {
+    width: 341px;
+    height: 51px;
+    justify-content: space-between;
+  }
+  body .rating-state .ratings [data-type-rate] {
+    width: 51px;
+    height: 51px;
+  }
+  body .rating-state .give-rate {
+    width: 341px;
+    height: 45px;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 2px;
+  }
+  body .thank-you-state {
+    width: 412px;
+    height: 416px;
+  }
+  body .thank-you-state .thank-you-icon {
+    width: 162px;
+    height: 108px;
+  }
+  body .thank-you-state .rate-val {
+    width: 193px;
+    height: 32px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  body .thank-you-state h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  body .thank-you-state p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}/*# sourceMappingURL=style.css.map */
